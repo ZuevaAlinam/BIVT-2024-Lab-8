@@ -1,10 +1,11 @@
-﻿using System;
+using System;
+
 namespace Lab_8
 {
     public class Blue_1 : Blue
     {
         private string[] _output = Array.Empty<string>();
-        
+
         public Blue_1(string input) : base(input) { }
 
         public string[] Output => _output;
@@ -14,11 +15,10 @@ namespace Lab_8
             string text = Input;
             if (string.IsNullOrEmpty(text))
             {
-                _output = Array.Empty<string>();
+                _output = null;  
                 return;
             }
 
-     
             int cntLines = 0;
             int first = 0;
 
@@ -70,6 +70,9 @@ namespace Lab_8
 
         public override string ToString()
         {
+            if (_output == null)
+                return null;
+
             return string.Join("\r\n", _output);
         }
     }
