@@ -1,5 +1,6 @@
-﻿using Lab_8;
+
 using System;
+namespace Lab_8 { 
 public class Blue_2 : Blue
 {
         private string _search;
@@ -89,3 +90,4 @@ public class Blue_2 : Blue
             return Output;
         }
     }
+}
