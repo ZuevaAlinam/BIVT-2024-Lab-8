@@ -4,9 +4,11 @@ namespace Lab_8
 {
     public class Blue_1 : Blue
     {
-        private string[] _output = Array.Empty<string>();
+        private string[] _output;
 
-        public Blue_1(string input) : base(input) { }
+        public Blue_1(string input) : base(input) {
+            _output = null;
+        }
 
         public string[] Output => _output;
 
